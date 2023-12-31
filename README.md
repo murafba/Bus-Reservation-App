@@ -90,7 +90,7 @@ There are 3 pages in this app, as follows:
 ### 6.1 [Jadwal/Schedule] Page
 On this page, users can view the available bus schedules (red: Jadwal) for today and the next two days. Users can check the date through the dropdown menu, and each date will display schedules for the morning (red: Pagi), afternoon (red: Siang), and evening (red: Malam). However, I didn't create a dynamic page; it's static. You can modify it as needed using Java Swing in NetBeans IDE. Below is the schedule page display.
 
-[Schedule Page](https://github.com/murafba/Bus-Reservation-App/blob/main/images/Screenshot%202023-12-31%20142443.png?raw=true "Schedule Page")
+![Schedule Page](https://github.com/murafba/Bus-Reservation-App/blob/main/images/Screenshot%202023-12-31%20142443.png?raw=true "Schedule Page")
 *Fig. 1 The Schedule Page Display
 
 ### 6.2 [Pemesanan/Booking] Page
