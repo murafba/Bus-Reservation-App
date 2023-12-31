@@ -27,12 +27,16 @@ Installing the app via Git Bash CLI:
 
 
 ## 4. SETTING UP THE DATABASE
-Before running the app, you need to set up the database. Here are the steps to follow:
-1. Create a database named `db_pemesanan_bus`
+Before running the app, you need to set up the database. You can import the database or follow the steps below:
+1. Create a database named `db_pemesanan_bis`
+
 ```
 CREATE DATABASE db_pemesanan_bus;
 ```
+
 2. Create two tables in that database: one named `tb_riwayat` and the other named `tb_akun`.
+`tb_riwayat` is a table used to store order history, while `tb_akun` is used to store user-entered data on the *Register* page.
+
 ```
 CREATE TABLE tb_akun (
   id INT AUTO_INCREMENT PRIMARY KEY,
@@ -43,6 +47,10 @@ CREATE TABLE tb_akun (
   alamat VARCHAR(50) NOT NULL,
 );
 ```
+
+> [!NOTE]
+> The attribute `nama` means *name*, `nik` refers to the national identification number, while `noHp` and `alamat` represent *phone number* and *address*, respectively.
+
 ```
 CREATE TABLE tb_riwayat (
   id INT AUTO_INCREMENT PRIMARY KEY,
@@ -54,6 +62,12 @@ CREATE TABLE tb_riwayat (
   total_bayar INT NOT NULL
 );
 ```
+
+> [!NOTE]
+> The attribute `tanggal` means *date*, `waktu` refers to the *time*, `jmlh_dewasa` and `jmlh_anak` while `noHp` and `alamat` represent *phone number* and *address*, respectively.
+
+> [!NOTE]
+> You can change the database and table names. However, you also need to modify the database connection name and table names in the `MainForm.java` class at lines 984 and 1017, and in the `Register.java` class at lines 360 and 444.
 
 
 ## 5. RUNNING THE APP
