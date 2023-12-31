@@ -28,7 +28,7 @@ Installing the app via Git Bash CLI:
 
 ## 4. SETTING UP THE DATABASE
 Before running the app, you need to set up the database. You can import the database or follow the steps below:
-1. Create a database named `db_pemesanan_bis`
+1. Create a database named `db_pemesanan_bus`
 
 ```
 CREATE DATABASE db_pemesanan_bus;
