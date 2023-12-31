@@ -48,9 +48,6 @@ CREATE TABLE tb_akun (
 );
 ```
 
-> [!NOTE]
-> The attribute `nama` means *name*, `nik` refers to the national identification number, while `noHp` and `alamat` represent *phone number* and *address*, respectively.
-
 ```
 CREATE TABLE tb_riwayat (
   id INT AUTO_INCREMENT PRIMARY KEY,
@@ -64,9 +61,9 @@ CREATE TABLE tb_riwayat (
 ```
 
 > [!NOTE]
-> The attribute `tanggal` means *date*, `waktu` refers to the *time*, `jmlh_dewasa` and `jmlh_anak` while `noHp` and `alamat` represent *phone number* and *address*, respectively.
+> The attribute `nama` means *name*, `nik` refers to the national identification number, while `noHp` and `alamat` represent *phone number* and *address*, respectively. In the `tb_riwayat` table, the attribute `tanggal` means *date*, `waktu` refers to *time*, while `jmlh_dewasa` and `jmlh_anak` stand for the number of adults and children. `kelas` and `total_bayar` represent the chosen bus class and the total amount to be paid by the user.
 
-> [!NOTE]
+> [!TIP]
 > You can change the database and table names. However, you also need to modify the database connection name and table names in the `MainForm.java` class at lines 984 and 1017, and in the `Register.java` class at lines 360 and 444.
 
 
