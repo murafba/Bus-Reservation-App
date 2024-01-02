@@ -12,7 +12,7 @@ The hardware required to support the operation of this app is as follows:
 The software required to support the operation of this app is as follows:
 1. Windows OS 10/11 64-bit
 2. NetBeans IDE version 14 and above
-3. Java Development Kit (JDK) version 15 and above
+3. Java Development Kit (JDK) version 20 and above
 4. PHP minimum version 8.1.6
 5. MariaDB server minimum version 10.4.24
 6. XAMPP control panel v3.3.0
@@ -74,7 +74,7 @@ Here are the steps to run the app:
 2. Open the downloaded project
 
 > [!IMPORTANT]
-> If the default JDK used is below version 15, it needs to be changed. Here are the steps: (a) Right-click on the project; (b) Select *properties*; (c) Choose the *Libraries* menu; (d) In the *Java Platform* dropdown menu, select JDK version 15 or above.
+> If the default JDK used is below version 20, it needs to be changed. Here are the steps: (a) Right-click on the project; (b) Select *properties*; (c) Choose the *Libraries* menu; (d) In the *Java Platform* dropdown menu, select JDK version 20 or above.
 
 3. Open the default package and select the `MainForm.java` class
 
