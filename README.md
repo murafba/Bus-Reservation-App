@@ -44,7 +44,8 @@ CREATE TABLE tb_akun (
   email VARCHAR(50) NOT NULL,
   nik VARCHAR(50) NOT NULL,
   noHp VARCHAR(50) NOT NULL,
-  alamat VARCHAR(50) NOT NULL,
+  jk VARCHAR(50) NOT NULL,
+  alamat VARCHAR(50) NOT NULL
 );
 ```
 
@@ -61,7 +62,7 @@ CREATE TABLE tb_riwayat (
 ```
 
 > [!NOTE]
-> The attribute `nama` means *name*, `nik` refers to the national identification number, while `noHp` and `alamat` represent *phone number* and *address*, respectively. In the `tb_riwayat` table, the attribute `tanggal` means *date*, `waktu` refers to *time*, while `jmlh_dewasa` and `jmlh_anak` stand for the number of adults and children. `kelas` and `total_bayar` represent the chosen bus class and the total amount to be paid by the user.
+> The attribute `nama` means *name*, `nik` and `jk` refers to the national identification number and gender, while `noHp` and `alamat` represent *phone number* and *address*, respectively. In the `tb_riwayat` table, the attribute `tanggal` means *date*, `waktu` refers to *time*, while `jmlh_dewasa` and `jmlh_anak` stand for the number of adults and children. `kelas` and `total_bayar` represent the chosen bus class and the total amount to be paid by the user.
 
 > [!TIP]
 > You can change the database and table names. However, you also need to modify the database connection name and table names in the `MainForm.java` class at lines 984 and 1017, and in the `Register.java` class at lines 360 and 444.
@@ -82,12 +83,53 @@ Here are the steps to run the app:
 There are 3 pages in this app, as follows:
 
 > [!NOTE]
-> This app was developed using the Indonesian language (red: Bahasa). Therefore, I have endeavored to translate the important meanings into English.
+> This app was developed using the Indonesian language. Therefore, I have endeavored to translate the important meanings into English.
 
-### 6.1 [Jadwal/Schedule] Page
-On this page, users can view the available bus schedules (red: Jadwal) for today and the next two days. Users can check the date through the dropdown menu, and each date will display schedules for the morning (red: Pagi), afternoon (red: Siang), and evening (red: Malam). However, I didn't create a dynamic page; it's static. You can modify it as needed using Java Swing in NetBeans IDE. Below is the schedule page display.
+### 6.1 [Jadwal | Schedule] Page
+On this page, users can view the available bus schedules for today and the next two days. Users can check the date through the dropdown menu, and each date will display schedules for the morning (translate: Pagi), afternoon (translate: Siang), and evening (translate: Malam). However, I didn't create a dynamic page; it's static. You can modify it as needed using Java Swing in NetBeans IDE. Below is the schedule page display.
 
 ![Schedule Page](https://github.com/murafba/Bus-Reservation-App/blob/main/images/Screenshot%202023-12-31%20142443.png?raw=true "Schedule Page")
 *Fig. 1 The Schedule Page Display*
 
-### 6.2 [Pemesanan/Booking] Page
+### 6.2 [Pemesanan | Booking] Page
+The booking page (translate: Pemesanan) is where users can reserve a bus. There are three class options: economy, business, and executive. After selecting the desired class, you need to choose the date (translate: Tanggal) and departure time (translate: Waktu) from the available dropdown menu. Then, input the number of adults and children accompanying. Finally, view the cost details by clicking the *Check Price* *(translate: Cek Harga) button and confirming the terms and conditions. The data input will be stored in the `tb_riwayat` table. Click the *Book Bus* (translate: Pesan Bus) button to proceed. Fig. 2 illustrates the booking page for the business class.
+
+![Booking Page](https://github.com/murafba/Bus-Reservation-App/blob/main/images/Screenshot%202023-12-31%20150420.png?raw=true "Booking Page")
+*Fig. 2 The Booking Page for Business Class*
+
+### 6.3 Registration Page
+The registration page is located in a separate class called `Register.java`. This page will appear when the user clicks the *Book Bus* (translate: Pesan Bus) button. On this page, the user needs to fill in personal information such as name, email, ID number (translate: nik), phone number, gender, and address. The data will be stored in the `tb_akun` table. Press the submit button to proceed or the back (translate: Kembali) button to cancel. The user will return to the schedule page in the `MainForm.java` class. Here's the display of the registration page.
+
+![Registration Page](https://github.com/murafba/Bus-Reservation-App/blob/main/images/Screenshot%202024-01-02%20193527.png?raw=true "Registration Page")
+*Fig. 3 The Registration Page*
+
+### 6.4 The Booking History Page
+The page is used to view anonymous booking history. It is integrated with the `tb_riwayat` table. Click the button to refresh the table.
+
+![The Booking History Page](https://github.com/murafba/Bus-Reservation-App/blob/main/images/Screenshot%202024-01-02%20202955.png?raw=true "The Booking History Page")
+*Fig. 4 The Booking History Page*
+
+
+## 7. ABOUT THE AUTHOR
+> Hi! My name is Muhammad Rafi Akbar. You can call me Rafi. I'm a bachelor of computer science from University of Sriwijaya, majoring in Informatics. You can reach out to me through the following accounts.
++ [LinkedIn](https://linkedin.com/in/murafba)
++ [GitHub](https://github.com/murafba)
+
+
+## 8. ACKNOWLEDGEMENT
+I acknowledge that the program developed is still very basic and lacks clarity of app's functionality. This is because the final project for the Visual Programming lecture primarily emphasizes the GUI development. Therefore, the developer fouces solely on building the interface and didn't extensively consider the application's functionality.
+
+
+## 9. HOW TO CONTRIBUTE
+If any of you have ideas regarding updates to the application, you can fork this project and then create pull requests. I would be happy to appreciate various ideas from all of you. Additionally, you can also ask questions about the project in the Issues section.
+
+
+## 10. SUPPORT ME
+If you found my project pretty useful, you can show your support by attributing to this project and giving it a star on this repository. Alternatively, you can also provide material support through the following links:
++ [PayPal](paypal.me/murafba)
++ [Saweria (for Indonesian)](https://saweria.co/murafba)
+
+
+## 11. LICENSE
+Copyright &copy; 2024 Muhammad Rafi Akbar <br>
+This project is under the [MIT](https://github.com/murafba/Bus-Reservation-App/blob/main/LICENSE) License.
