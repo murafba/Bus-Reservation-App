@@ -126,7 +126,7 @@ If any of you have ideas regarding updates to the application, you can fork this
 
 ## 10. SUPPORT ME
 If you found my project pretty useful, you can show your support by attributing to this project and giving it a star on this repository. Alternatively, you can also provide material support through the following links:
-+ [PayPal](paypal.me/murafba)
++ [PayPal](https://paypal.me/murafba)
 + [Saweria (for Indonesian)](https://saweria.co/murafba)
 
 
